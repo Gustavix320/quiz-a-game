@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top, rgba(22, 163, 74, 0.08), transparent 35%),
+    #050914;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* APP */
+.app {
+  min-height: 100vh;
+  padding: 30px;
+}
+
+/* GRID */
+.quiz-container {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 30px;
+}
+
+/* LEFT */
+.image-area {
+  background: #111827;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.image-area img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* RIGHT */
+.questions-area {
+  background: #111827;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.questions-area h1 {
+  margin-top: 0;
+  color: #4ade80;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* PERGUNTA */
+.question-card {
+  margin-bottom: 24px;
+  padding: 16px;
+  background: #1f2937;
+  border-radius: 12px;
+}
+
+.question-card h2 {
+  font-size: 18px;
+  margin-top: 0;
+  color: #facc15;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(250, 204, 21, 0.7);
+}
+
+/* BOTÕES */
+button {
+  width: 100%;
+  display: block;
+  margin: 8px 0;
+  padding: 12px;
+  border: 1px solid #374151;
+  background: #0f172a;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  text-align: left;
+}
+
+button:hover {
+  background: #1e293b;
+}
+
+button.selected {
+  border-color: #4ade80;
+  background: #064e3b;
+}
+
+/* ENVIAR */
+.finish-button {
+  background: #16a34a;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* RESULTADO */
+.resultado {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #022c22;
+  border: 1px solid #4ade80;
+}
+
+/* 🔥 BOTÕES VOLTAR / PRÓXIMO (CENTRALIZADOS) */
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.navigation-buttons button {
+  width: 140px;
+  text-align: center;
+  font-weight: bold;
+  color: #facc15;
+  border: 1px solid rgba(250, 204, 21, 0.4);
+}
+
+/* ===================== */
+/* 🔥 HOME (PÁGINA INICIAL) */
+/* ===================== */
+
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at top, rgba(250, 204, 21, 0.1), transparent 30%),
+    #050914;
+}
+
+.home-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 20px;
+  background: #111827;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0,0,0,0.7);
+}
+
+.home-card h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.home-subtitle {
+  color: #4ade80;
+  margin: 10px 0 20px;
+  font-size: 18px;
+}
+
+.name-box input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #374151;
+  background: #0f172a;
+  color: white;
+  font-size: 16px;
+}
+
+.start-button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: #16a34a;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ===================== */
+/* 📱 RESPONSIVO */
+/* ===================== */
+
+@media (max-width: 900px) {
+  .quiz-container {
+    grid-template-columns: 1fr;
+  }
+
+  .questions-area h1 {
+    font-size: 22px;
+  }
+}
+
+
+.range-answer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+}
+
+.range-box {
+  padding: 12px 8px;
+  border-radius: 8px;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+}
+
+.flat-box {
+  background: #8fbd8b;
+}
+
+.nai-box {
+  background: #e9937b;
+}
+
+.allin-box {
+  background: #a9473b;
+}
+
+.answer.selected .flat-box,
+.answer.selected .nai-box,
+.answer.selected .allin-box {
+  outline: 2px solid #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.45);
+}
