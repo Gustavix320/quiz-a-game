@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import { supabase } from "./supabaseClient";
 
 const questoes = [
   {
@@ -454,7 +455,62 @@ if (mostrarResultado === "final") {
     </main>
   );
 
- function finalizarQuiz() {
+async function finalizarQuiz() {
+  let totalQuestoes = 0;
+  let totalAcertos = 0;
+
+  const resultadoPorSpot = questoes.map((spot, spotIndex) => {
+    let acertosSpot = 0;
+
+    const perguntas = spot.perguntas.map((pergunta, perguntaIndex) => {
+      totalQuestoes++;
+
+      const respostaAluno = respostas[spotIndex]?.[perguntaIndex] || "";
+      const acertou = respostaAluno === pergunta.correta;
+
+      if (acertou) {
+        acertosSpot++;
+        totalAcertos++;
+      }
+
+      return {
+        pergunta: pergunta.texto,
+        respostaAluno,
+        respostaCorreta: pergunta.correta,
+        acertou,
+      };
+    });
+
+    return {
+      spot: spot.spot,
+      titulo: spot.titulo,
+      acertos: acertosSpot,
+      total: spot.perguntas.length,
+      perguntas,
+    };
+  });
+
+  const porcentagemFinal = Math.round((totalAcertos / totalQuestoes) * 100);
+
+  // 🔥 SALVA NO SUPABASE
+  const { error } = await supabase.from("quiz_resultados").insert([
+    {
+      nome: nome || "Sem nome",
+      total_acertos: totalAcertos,
+      total_questoes: totalQuestoes,
+      porcentagem: porcentagemFinal,
+      respostas: resultadoPorSpot,
+    },
+  ]);
+
+  if (error) {
+    console.error("Erro ao salvar:", error);
+    alert("Erro ao salvar resultado");
+    return;
+  }
+
+  console.log("Resultado salvo com sucesso!");
+
   setMostrarResultado("final");
 }
 
