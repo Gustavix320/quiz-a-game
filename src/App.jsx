@@ -285,6 +285,83 @@ function voltarSpot() {
   const total = questao.perguntas.length;
   const nota = Math.round((acertos / total) * 100);
 
+if (mostrarResultado === "final") {
+  let totalQuestoes = 0;
+  let totalAcertos = 0;
+
+  const resultadoPorSpot = questoes.map((spot, spotIndex) => {
+    let acertosSpot = 0;
+
+    spot.perguntas.forEach((pergunta, perguntaIndex) => {
+      totalQuestoes++;
+
+      const respostaAluno = respostas[spotIndex]?.[perguntaIndex];
+
+      if (respostaAluno === pergunta.correta) {
+        acertosSpot++;
+        totalAcertos++;
+      }
+    });
+
+    return {
+      spot: spot.spot,
+      titulo: spot.titulo,
+      acertos: acertosSpot,
+      total: spot.perguntas.length,
+    };
+  });
+
+  const porcentagemFinal = Math.round((totalAcertos / totalQuestoes) * 100);
+
+  return (
+    <main className="app">
+      <section className="right-panel final-panel">
+        <div className="spot-label">
+          <span></span>
+          GABARITO FINAL
+          <span></span>
+        </div>
+
+        <h1>Resultado de {nome}</h1>
+
+        <div className="resultado final-result">
+          <h3>Resultado geral</h3>
+          <p>
+            Você acertou {totalAcertos} de {totalQuestoes} questões.
+          </p>
+          <p>Porcentagem final: {porcentagemFinal}%</p>
+        </div>
+
+        <div className="gabarito-list">
+          {resultadoPorSpot.map((item) => (
+            <div className="gabarito-card" key={item.spot}>
+              <strong>
+                {item.spot} — {item.titulo}
+              </strong>
+              <span>
+                {item.acertos} / {item.total} acertos
+              </span>
+            </div>
+          ))}
+        </div>
+
+        <button
+          className="finish-button"
+          onClick={() => {
+            setIniciado(false);
+            setNome("");
+            setSpotAtual(0);
+            setRespostas({});
+            setMostrarResultado(false);
+          }}
+        >
+          REINICIAR QUIZ
+        </button>
+      </section>
+    </main>
+  );
+}
+
   return (
     <main className="app">
       <section className="quiz-container">
@@ -373,14 +450,25 @@ function voltarSpot() {
               {spotAtual === 0 ? "← INÍCIO" : "← VOLTAR"}
             </button>
 
-            <button onClick={proximoSpot} disabled={spotAtual === questoes.length - 1}>
-              PRÓXIMO →
-            </button>
+              {spotAtual === questoes.length - 1 ? (
+                <button onClick={finalizarQuiz}>
+                  FINALIZAR →
+                </button>
+              ) : (
+                <button onClick={proximoSpot}>
+                  PRÓXIMO →
+                </button>
+              )}
           </div>
         </div>
       </section>
     </main>
   );
+
+ function finalizarQuiz() {
+  setMostrarResultado("final");
+}
+
 }
 
 export default App;

@@ -229,3 +229,41 @@ button.selected {
   outline: 2px solid #ffffff;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.45);
 }
+
+.final-panel {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.final-result {
+  text-align: center;
+  font-size: 18px;
+}
+
+.gabarito-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.gabarito-card {
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(250, 204, 21, 0.3);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: white;
+}
+
+.gabarito-card strong {
+  color: #facc15;
+}
+
+.gabarito-card span {
+  color: #4ade80;
+  font-weight: 900;
+}
