@@ -30,8 +30,8 @@ const questoes = [
 {
   imagem: "/spots/spot2.png",
   spot: "SPOT 2",
-  titulo: "K5s SB x BTN",
-  info: { torneio: "MTT - PKO", fase: "72% field left", players: "318/440", blinds: "100 / 200 (25)" },
+  titulo: "K5s BTN x CO",
+  info: { torneio: "MTT - PKO", fase: "75% field left", players: "318/440", blinds: "100 / 200 (25)" },
   perguntas: [
     {
       texto: "QUESTÃO 1: QUAL A MELHOR AÇÃO?",
@@ -55,7 +55,7 @@ const questoes = [
     imagem: "/spots/spot3.png",
     spot: "SPOT 3",
     titulo: "68o BTN x CO",
-    info: { torneio: "MTT - PKO", fase: "68% field left", players: "299/440", blinds: "250 / 500 (60)" },
+    info: { torneio: "MTT - PKO", fase: "75% field left", players: "299/440", blinds: "250 / 500 (60)" },
     perguntas: [
       {
         texto: "QUESTÃO 1: QUAL A MELHOR AÇÃO?",
@@ -79,7 +79,7 @@ const questoes = [
     imagem: "/spots/spot4.png",
     spot: "SPOT 4",
     titulo: "RFI HJ",
-    info: { torneio: "MTT - PKO", fase: "74% field left", players: "326/440", blinds: "50 / 100 (12)" },
+    info: { torneio: "MTT - PKO", fase: "75% field left", players: "326/440", blinds: "50 / 100 (12)" },
     perguntas: [
       {
         texto: "QUESTÃO 1: QUAL A MELHOR AÇÃO?",
@@ -103,7 +103,7 @@ const questoes = [
     imagem: "/spots/spot5.png",
     spot: "SPOT 5",
     titulo: "66 vs Rejam SB",
-    info: { torneio: "MTT - PKO", fase: "70% field left", players: "308/440", blinds: "100 / 200 (25)" },
+    info: { torneio: "MTT - PKO", fase: "75% field left", players: "308/440", blinds: "100 / 200 (25)" },
     perguntas: [
       {
         texto: "QUESTÃO 1: QUANTOS % DE OPEN NESSE SPOT?",
@@ -127,7 +127,7 @@ const questoes = [
     imagem: "/spots/spot6.png",
     spot: "SPOT 6",
     titulo: "J8s CO vs HJ",
-    info: { torneio: "MTT - PKO", fase: "66% field left", players: "291/440", blinds: "250 / 500 (60)" },
+    info: { torneio: "MTT - PKO", fase: "75% field left", players: "291/440", blinds: "250 / 500 (60)" },
     perguntas: [
       {
         texto: "QUESTÃO 1: QUAL A MELHOR AÇÃO?",
@@ -151,7 +151,7 @@ const questoes = [
     imagem: "/spots/spot7.png",
     spot: "SPOT 7",
     titulo: "JJ vs UTG1",
-    info: { torneio: "MTT - PKO", fase: "73% field left", players: "321/440", blinds: "50 / 100 (12)" },
+    info: { torneio: "MTT - PKO", fase: "75% field left", players: "321/440", blinds: "50 / 100 (12)" },
     perguntas: [
       {
         texto: "QUESTÃO: QUAL A FREQUÊNCIA APROXIMADA?",
@@ -170,7 +170,7 @@ const questoes = [
     imagem: "/spots/spot8.png",
     spot: "SPOT 8",
     titulo: "79s CO vs HJ",
-    info: { torneio: "MTT - PKO", fase: "69% field left", players: "304/440", blinds: "100 / 200 (25)" },
+    info: { torneio: "MTT - PKO", fase: "75% field left", players: "304/440", blinds: "100 / 200 (25)" },
     perguntas: [
       {
         texto: "QUESTÃO 1: QUAL A MELHOR AÇÃO?",
