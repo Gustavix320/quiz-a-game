@@ -14,192 +14,181 @@ const questoes = [
         correta: "Flat",
       },
       {
-        texto: "QUESTÃO 2: QUAL A FREQUÊNCIA APROXIMADA?",
+        texto: "QUESTÃO 2: QUAL BOTTON DO NOSSO RANGE QUE VAMOS DAR VPIP ?",
         alternativas: [
-          "10% flat / 15% 3bet NAI / 5% all-in",
-          "15% flat / 5% 3bet NAI / 5% all-in",
-          "25% flat / 0% 3bet NAI / 0% all-in",
+          "T9o, 45s, J5s, Q3s",
+          "TJo, 84s, J7s, Q5s",
+          "TQo, 87s, J8s, Q7s",
+          "JQo, 98s, J9s, Q8s",
         ],
-        correta: "10% flat / 15% 3bet NAI / 5% all-in",
+        correta: "T9o, 45s, J5s, Q3s",
       },
     ],
   },
-  {
-    imagem: "/spots/spot2.png",
-    spot: "SPOT 2",
-    titulo: "K5s SB x BTN",
-    info: { torneio: "MTT - PKO", fase: "72% field left", players: "318/440", blinds: "100 / 200 (25)" },
-    perguntas: [
-      {
-        texto: "QUESTÃO 1: QUAL A MELHOR AÇÃO?",
-        alternativas: ["Flat", "3bet NAI", "3bet All In", "Fold"],
-        correta: "Flat",
-      },
-      {
-        texto: "QUESTÃO 2: QUAL A FREQUÊNCIA APROXIMADA?",
-        alternativas: [
-          "10% flat / 5% 3bet NAI / 10% all-in",
-          "15% flat / 0% 3bet NAI / 15% all-in",
-          "25% flat / 0% 3bet NAI / 0% all-in",
-        ],
-        correta: "15% flat / 0% 3bet NAI / 15% all-in",
-      },
-    ],
-  },
+
+{
+  imagem: "/spots/spot2.png",
+  spot: "SPOT 2",
+  titulo: "K5s SB x BTN",
+  info: { torneio: "MTT - PKO", fase: "72% field left", players: "318/440", blinds: "100 / 200 (25)" },
+  perguntas: [
+    {
+      texto: "QUESTÃO 1: QUAL A MELHOR AÇÃO?",
+      alternativas: ["Flat", "3bet NAI", "3bet All In", "Fold"],
+      correta: "Flat",
+    },
+    {
+      texto: "QUESTÃO 2: SE POR ACASO EXISTE SHOVE NESSE SPOT, QUAL O RANGE QUE MAIS SE APROXIMA DA TEORIA?",
+      alternativas: [
+        "22 ~ 88 / TQs, JTs / A2s - A5s / A9o - AJo",
+        "22 - 55 / KTs, JQs / A2s - A8s / ATo - AQo",
+        "22 - QQ / J9s, JTs / K6s - K9s / A2s - A8s e AQs AKs / A8o - AKo",
+        "Não tenho shove nesse spot",
+      ],
+      correta: "22 - QQ / J9s, JTs / K6s - K9s / A2s - A8s e AQs AKs / A8o - AKo",
+    },
+  ],
+},
+
   {
     imagem: "/spots/spot3.png",
     spot: "SPOT 3",
-    titulo: "A8s SB x BTN",
+    titulo: "68o BTN x CO",
     info: { torneio: "MTT - PKO", fase: "68% field left", players: "299/440", blinds: "250 / 500 (60)" },
     perguntas: [
       {
         texto: "QUESTÃO 1: QUAL A MELHOR AÇÃO?",
         alternativas: ["Flat", "3bet NAI", "3bet All In", "Fold"],
-        correta: "3bet All In",
+        correta: "Fold",
       },
       {
-        texto: "QUESTÃO 2: QUAL A FREQUÊNCIA APROXIMADA?",
+        texto: "QUESTÃO 2: QUAL O BOTTOM DO NOSSO RANGE?",
         alternativas: [
-          "5% flat / 10% 3bet NAI / 20% all-in",
-          "15% flat / 5% 3bet NAI / 5% all-in",
-          "25% flat / 0% 3bet NAI / 0% all-in",
+          "JTo, A4o, 45s, T7s, Q5s",
+          "TQo, A7o, 78s, J8s, Q7s",
+          "JQo, A9o, 98s, J9s, Q8s",
+          "89o, A2o, 34s, J3s, Q2s",
         ],
-        correta: "5% flat / 10% 3bet NAI / 20% all-in",
+        correta: "JTo, A4o, 45s, T7s, Q5s",
       },
     ],
   },
+
   {
     imagem: "/spots/spot4.png",
     spot: "SPOT 4",
-    titulo: "J9s SB x BTN",
+    titulo: "RFI HJ",
     info: { torneio: "MTT - PKO", fase: "74% field left", players: "326/440", blinds: "50 / 100 (12)" },
     perguntas: [
       {
         texto: "QUESTÃO 1: QUAL A MELHOR AÇÃO?",
-        alternativas: ["Flat", "3bet NAI", "3bet All In", "Fold"],
-        correta: "Flat",
+        alternativas: ["Raise", "Limp", "Fold", "All In"],
+        correta: "All In",
       },
       {
-        texto: "QUESTÃO 2: QUAL A FREQUÊNCIA APROXIMADA?",
+        texto: "QUESTÃO 2: QUAL BOTTON DE OPEN NESSE SPOT?",
         alternativas: [
-          "20% flat / 5% 3bet NAI / 0% all-in",
-          "10% flat / 10% 3bet NAI / 5% all-in",
-          "0% flat / 15% 3bet NAI / 15% all-in",
+          "A2o, K7o, J8o, 22, 45s, J4s, Q2s, K2s",
+          "A4o, K9o, JTo, 22, 67s, J7s, Q6s, K4s",
+          "A7o, KTo, JTo, 22, 78s, J8s, Q7s, K6s",
+          "A8o, KTo, JQo, 22, 98s, J9s, Q8s, K7s",
         ],
-        correta: "20% flat / 5% 3bet NAI / 0% all-in",
+        correta: "A4o, K9o, JTo, 22, 67s, J7s, Q6s, K4s",
       },
     ],
   },
+
   {
     imagem: "/spots/spot5.png",
     spot: "SPOT 5",
-    titulo: "KTo SB x BTN",
+    titulo: "66 vs Rejam SB",
     info: { torneio: "MTT - PKO", fase: "70% field left", players: "308/440", blinds: "100 / 200 (25)" },
     perguntas: [
       {
-        texto: "QUESTÃO 1: QUAL A MELHOR AÇÃO?",
-        alternativas: ["Flat", "3bet NAI", "3bet All In", "Fold"],
-        correta: "Fold",
+        texto: "QUESTÃO 1: QUANTOS % DE OPEN NESSE SPOT?",
+        alternativas: ["30%", "37%", "42%", "54%"],
+        correta: "42%",
       },
       {
-        texto: "QUESTÃO 2: QUAL A FREQUÊNCIA APROXIMADA?",
+        texto: "QUESTÃO 2: QUAL BOTTOM DE CALL VS SHOVE ?",
         alternativas: [
-          "0% flat / 0% 3bet NAI / 0% all-in",
-          "10% flat / 5% 3bet NAI / 5% all-in",
-          "20% flat / 0% 3bet NAI / 10% all-in",
+          "66+, A4s+, A8o+, JQo+, JTs+",
+          "44+, A5s+, A9o+, JQo+, Q9s+",
+          "33+, A7s+, A9o+, KQo+, JTs+",
+          "22+, A3s+, A7o+, JQ+, J9s+",
         ],
-        correta: "0% flat / 0% 3bet NAI / 0% all-in",
+        correta: "33+, A7s+, A9o+, KQo+, JTs+",
       },
     ],
   },
+
   {
     imagem: "/spots/spot6.png",
     spot: "SPOT 6",
-    titulo: "A5o SB x BTN",
+    titulo: "J8s CO vs HJ",
     info: { torneio: "MTT - PKO", fase: "66% field left", players: "291/440", blinds: "250 / 500 (60)" },
     perguntas: [
       {
         texto: "QUESTÃO 1: QUAL A MELHOR AÇÃO?",
         alternativas: ["Flat", "3bet NAI", "3bet All In", "Fold"],
-        correta: "3bet NAI",
+        correta: "Flat",
       },
       {
-        texto: "QUESTÃO 2: QUAL A FREQUÊNCIA APROXIMADA?",
+        texto: "QUESTÃO 2: QUAL RANGE DE SHOVE QUE MAIS SE APROXIMA DA TEORIA NESSE SPOT?",
         alternativas: [
-          "5% flat / 20% 3bet NAI / 5% all-in",
-          "15% flat / 0% 3bet NAI / 15% all-in",
-          "25% flat / 0% 3bet NAI / 0% all-in",
+          "66 - TT, JQs - KJs, A4s - A5s, AQo - AKo",
+          "22 - 55, JTs, QTs, KTs, A2s - A5s, ATo - AQo",
+          "88 - JJ, J9s, Q9s, K7s - K9s, A2s - A6s, AJo - AKo",
+          "Não tem range de shove",
         ],
-        correta: "5% flat / 20% 3bet NAI / 5% all-in",
+        correta: "88 - JJ, J9s, Q9s, K7s - K9s, A2s - A6s, AJo - AKo",
       },
     ],
   },
+
   {
     imagem: "/spots/spot7.png",
     spot: "SPOT 7",
-    titulo: "T8s SB x BTN",
+    titulo: "JJ vs UTG1",
     info: { torneio: "MTT - PKO", fase: "73% field left", players: "321/440", blinds: "50 / 100 (12)" },
     perguntas: [
       {
+        texto: "QUESTÃO: QUAL A FREQUÊNCIA APROXIMADA?",
+        alternativas: [
+          "10% flat, 5% 3bet NAI, 0% all-in",
+          "16% flat, 2% 3bet NAI, 0% Allin",
+          "13% flat, 4% 3bet NAI, 0% all-in",
+          "20% flat, 4% 3bet NAI, 0% all-in",
+        ],
+        correta: "16% flat, 2% 3bet NAI, 0% Allin",
+      },
+    ],
+  },
+
+  {
+    imagem: "/spots/spot8.png",
+    spot: "SPOT 8",
+    titulo: "79s CO vs HJ",
+    info: { torneio: "MTT - PKO", fase: "69% field left", players: "304/440", blinds: "100 / 200 (25)" },
+    perguntas: [
+      {
         texto: "QUESTÃO 1: QUAL A MELHOR AÇÃO?",
-        alternativas: ["Flat", "3bet NAI", "3bet All In", "Fold"],
+        alternativas: ["Flat", "3bet NAI", "3bet all in", "Fold"],
         correta: "Flat",
       },
       {
         texto: "QUESTÃO 2: QUAL A FREQUÊNCIA APROXIMADA?",
         alternativas: [
-          "25% flat / 0% 3bet NAI / 0% all-in",
-          "10% flat / 10% 3bet NAI / 5% all-in",
-          "0% flat / 5% 3bet NAI / 20% all-in",
+          "18% flat, 5% 3bet NAI, 0% 3bet all in",
+          "22% flat, 7% 3bet NAI, 0% 3bet all in",
+          "26% flat, 5% 3bet NAI, 2% 3bet all in",
+          "32% flat, 0% 3bet NAI, 2% 3bet All in",
         ],
-        correta: "25% flat / 0% 3bet NAI / 0% all-in",
+        correta: "32% flat, 0% 3bet NAI, 2% 3bet All in",
       },
     ],
   },
-  {
-    imagem: "/spots/spot8.png",
-    spot: "SPOT 8",
-    titulo: "K7s SB x BTN",
-    info: { torneio: "MTT - PKO", fase: "69% field left", players: "304/440", blinds: "100 / 200 (25)" },
-    perguntas: [
-      {
-        texto: "QUESTÃO 1: QUAL A MELHOR AÇÃO?",
-        alternativas: ["Flat", "3bet NAI", "3bet All In", "Fold"],
-        correta: "3bet All In",
-      },
-      {
-        texto: "QUESTÃO 2: QUAL A FREQUÊNCIA APROXIMADA?",
-        alternativas: [
-          "10% flat / 0% 3bet NAI / 20% all-in",
-          "15% flat / 10% 3bet NAI / 0% all-in",
-          "25% flat / 0% 3bet NAI / 0% all-in",
-        ],
-        correta: "10% flat / 0% 3bet NAI / 20% all-in",
-      },
-    ],
-  },
-  {
-    imagem: "/spots/spot9.png",
-    spot: "SPOT 9",
-    titulo: "Q9o SB x BTN",
-    info: { torneio: "MTT - PKO", fase: "71% field left", players: "312/440", blinds: "250 / 500 (60)" },
-    perguntas: [
-      {
-        texto: "QUESTÃO 1: QUAL A MELHOR AÇÃO?",
-        alternativas: ["Flat", "3bet NAI", "3bet All In", "Fold"],
-        correta: "Fold",
-      },
-      {
-        texto: "QUESTÃO 2: QUAL A FREQUÊNCIA APROXIMADA?",
-        alternativas: [
-          "0% flat / 0% 3bet NAI / 0% all-in",
-          "10% flat / 5% 3bet NAI / 10% all-in",
-          "20% flat / 5% 3bet NAI / 0% all-in",
-        ],
-        correta: "0% flat / 0% 3bet NAI / 0% all-in",
-      },
-    ],
-  },
+
 ];
 
 function App() {

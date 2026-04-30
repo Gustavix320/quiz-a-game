@@ -107,7 +107,7 @@ button.selected {
   border: 1px solid #4ade80;
 }
 
-/* 🔥 BOTÕES VOLTAR / PRÓXIMO (CENTRALIZADOS) */
+/* BOTÕES VOLTAR / PRÓXIMO */
 .navigation-buttons {
   display: flex;
   justify-content: center;
@@ -124,7 +124,7 @@ button.selected {
 }
 
 /* ===================== */
-/* 🔥 HOME (PÁGINA INICIAL) */
+/* HOME */
 /* ===================== */
 
 .home-page {
@@ -181,7 +181,7 @@ button.selected {
 }
 
 /* ===================== */
-/* 📱 RESPONSIVO */
+/* RESPONSIVO */
 /* ===================== */
 
 @media (max-width: 900px) {
@@ -194,6 +194,9 @@ button.selected {
   }
 }
 
+/* ===================== */
+/* RANGE PADRÃO */
+/* ===================== */
 
 .range-answer {
   width: 100%;
@@ -201,6 +204,20 @@ button.selected {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 6px;
 }
+
+/* ===================== */
+/* 🔥 RANGE COMPACTO (SPOT 2) */
+/* ===================== */
+
+.range-answer-compact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  justify-content: flex-start;
+  max-width: 420px;
+}
+
+/* BOXES */
 
 .range-box {
   padding: 12px 8px;
@@ -210,6 +227,16 @@ button.selected {
   color: white;
   font-size: 14px;
 }
+
+/* 🔥 versão compacta */
+.range-answer-compact .range-box {
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+/* CORES */
 
 .flat-box {
   background: #8fbd8b;
@@ -223,12 +250,18 @@ button.selected {
   background: #a9473b;
 }
 
+/* SELEÇÃO */
+
 .answer.selected .flat-box,
 .answer.selected .nai-box,
 .answer.selected .allin-box {
   outline: 2px solid #ffffff;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.45);
 }
+
+/* ===================== */
+/* FINAL */
+/* ===================== */
 
 .final-panel {
   max-width: 760px;
