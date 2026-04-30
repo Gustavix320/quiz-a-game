@@ -198,6 +198,7 @@ function App() {
   const [spotAtual, setSpotAtual] = useState(0);
   const [respostas, setRespostas] = useState({});
   const [mostrarResultado, setMostrarResultado] = useState(false);
+  const [horarioFinal, setHorarioFinal] = useState("");
 
   const questao = questoes[spotAtual];
 
@@ -271,6 +272,20 @@ function voltarSpot() {
   }
 }
 
+function formatarHorario(dataISO) {
+  if (!dataISO) return "";
+
+  const data = new Date(dataISO);
+
+  return data.toLocaleString("pt-BR", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
+
   const acertos = calcularAcertos();
   const total = questao.perguntas.length;
   const nota = Math.round((acertos / total) * 100);
@@ -313,6 +328,12 @@ if (mostrarResultado === "final") {
         </div>
 
         <h1>Resultado de {nome}</h1>
+
+        {horarioFinal && (
+          <p className="final-time">
+            Enviado em: {formatarHorario(horarioFinal)}
+          </p>
+        )}
 
         <div className="resultado final-result">
           <h3>Resultado geral</h3>
@@ -492,8 +513,10 @@ async function finalizarQuiz() {
 
   const porcentagemFinal = Math.round((totalAcertos / totalQuestoes) * 100);
 
-  // 🔥 SALVA NO SUPABASE
-  const { error } = await supabase.from("quiz_resultados").insert([
+// 🔥 SALVA NO SUPABASE E PEGA O HORÁRIO GERADO
+const { data, error } = await supabase
+  .from("quiz_resultados")
+  .insert([
     {
       nome: nome || "Sem nome",
       total_acertos: totalAcertos,
@@ -501,17 +524,24 @@ async function finalizarQuiz() {
       porcentagem: porcentagemFinal,
       respostas: resultadoPorSpot,
     },
-  ]);
+  ])
+  .select();
 
-  if (error) {
-    console.error("Erro ao salvar:", error);
-    alert("Erro ao salvar resultado");
-    return;
-  }
+if (error) {
+  console.error("Erro ao salvar:", error);
+  alert("Erro ao salvar resultado");
+  return;
+}
 
-  console.log("Resultado salvo com sucesso!");
+const horarioSalvo = data?.[0]?.criado_em;
 
-  setMostrarResultado("final");
+if (horarioSalvo) {
+  setHorarioFinal(horarioSalvo);
+}
+
+console.log("Resultado salvo com sucesso!");
+
+setMostrarResultado("final");
 }
 
 }
